@@ -5,7 +5,9 @@ export const getGifs = async( categoria ) => {
     const gifs = data.map(img => ({
         id: img.id,
         title: img.title,
-        url: img.images.original.url
+        url: img.images.original.url,
+        type: img.type,
+        orig: img.url
     }));
     return gifs;
 }
